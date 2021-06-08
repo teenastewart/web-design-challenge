@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Humidity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a class="nav-link-home" href="home.html">Latitude</a>
+    <a class="nav-link-2" href="data.html">Data</a>
+    <a class="nav-link-1" href="comparison.html">Comparisons</a>
+    <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+        </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a href="cloudiness.html">Cloudiness</a></li>
+            <li><a href="humidity.html">Humidity</a></li>
+            <li><a href="max-temp.html">Maximum Temperature</a></li>
+            <li><a href="wind-speed.html">Wind Speed</a></li>
+            </ul>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>  
+
+    
+    <div class="container-xxl">
+        <div class ="row">
+            
+          <div class="col-md-7">
+            <div class="blurb">
+              <div class="row justify-content-center">
+                <div class="col">
+                  <h1>Summary: Latitude vs Humidity</h1>
+                </div>
+              </div>
+              <div class="row justify-content-center"> 
+                <div class="col">
+                  <p>
+                    <img src="Visualizations/City Latitude vs Humidity (%).png" class="rounded float-left" alt="Graph of city latitudes and humidity">
+                  </p>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col">
+                  <p>From the plotted data you can see that there is a wide distribution of average percentage humidity over all latitudes. </p>
+                  <p>Similar to cloud cover, there is not a strong trend between latitude and humidity. However, we do see a weak correlation between high humidity at the equator (0) and again closer to the poles(-40, and 60), with more humidity in the areas between (-40 to -20, and 20 to 40). The similarity between cloud cover and humidity would be expected with higher air moisture being required for both. This would likely fluctuate slighty given the different seasons between hemispheres.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="preview">
+                <h1>Visualizations</h1>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <a href="cloudiness.html">
+                            <img src="Visualizations/City Latitude vs Cloudiness (%).png" alt="Graph of City Latitude vs Cloudiness" style="width:200px;height:200px;">
+                            </a>
+                    </div>
+                    <div class="col">
+                            <a href="humidity.html">
+                                <img src="Visualizations/City Latitude vs Humidity (%).png" alt="Graph of City Latitude vs Humidity" style="width:200px;height:200px;">
+                                </a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <a href="max-temp.html">
+                            <img src="Visualizations/City Latitude vs Max Temperature (F).png" alt="Graph of City Latitude vs Temperature" style="width:200px;height:200px;">
+                            </a>
+                    </div>
+                    <div class="col">
+                        <a href="wind-speed.html">
+                            <img src="Visualizations/City Latitude vs Wind Speed (mph).png" alt="Graph of City Latitude vs Wind Speed" style="width:200px;height:200px;">
+                            </a>
+                    </div>
+                </div>     
+            </div>
+          </div>
+        </div>    
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+  </script>
+
+           
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
+
+  </body>
+  
+  </html>  
